@@ -20,16 +20,20 @@ const Todo: FC<TodoProps> = ({ task }) => {
           </button>
         </div>
       </div>
-      <div className=" px-4">
-        <p className="text-gray-600 w-80 text-sm">{task.job}</p>
+      <div className="flex justify-between">
+        <p className="text-gray-600 w-80 text-sm px-4">{task.name}</p>
+        <button>
+          <Image height={15} width={15} src={remove} alt="remove" />
+        </button>
       </div>
-      <div className="w-1/12 ml-4  ">
+
+      {/* <div className="w-1/12 bg-white h-14">
         <div className="h-8 w-8 flex items-center justify-center">
           <button>
             <Image height={15} width={15} src={remove} alt="remove" />
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

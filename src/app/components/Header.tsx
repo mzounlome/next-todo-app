@@ -4,9 +4,12 @@ import Image from "next/image";
 import lightM from "../images/bg-mobile-light.jpg";
 import moon from "../images/icon-moon.svg";
 import Input from "./Input";
-interface HeaderProps {}
+interface HeaderProps {
+  inputChange: any;
+  onSubmit: any;
+}
 //
-const Header: FC<HeaderProps> = () => {
+const Header: FC<HeaderProps> = ({ inputChange, onSubmit }) => {
   return (
     <div className="h-60 w-full flex flex-col items-center relative">
       <div className="w-11/12 z-20 mt-8 flex justify-between">
@@ -22,7 +25,7 @@ const Header: FC<HeaderProps> = () => {
         src={lightM}
         alt="light-mobile"
       />
-      <Input />
+      <Input inputChange={inputChange} onSubmit={onSubmit} />
     </div>
   );
 };
