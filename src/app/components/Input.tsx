@@ -1,7 +1,5 @@
 "use client";
 import { FC } from "react";
-import check from "../images/icon-check.svg";
-import Image from "next/image";
 interface InputProps {
   inputChange: any;
   onSubmit: any;
@@ -13,9 +11,7 @@ const Input: FC<InputProps> = ({ inputChange, onSubmit }) => {
       <div
         className="h-8 w-8 rounded-full flex items-center justify-center
        mr-3 relative  border-gray border-2"
-      >
-        {/* <Image height={15} width={15} src={check} alt="check" /> */}
-      </div>
+      ></div>
       <input
         onChange={inputChange}
         placeholder="Create a new todo..."
